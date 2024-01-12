@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+        .continer{
+            display: flex;
+            height: 400px;
+            gap: 5px;
+            margin-bottom: 5px;
+
+        }
+        .continer img{
+            width:100%;
+        }
+        .continer > div{
+            flex:1;
+        }
+        .item1{
+            width: 100%;
+           height: 100%;
+        }
+        .continer2{
+            height: 49.5%;
+        }
+        .tiger2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media screen and (max-width:576px) {
+            .continer{
+                flex-direction: column;
+                height:auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="continer">
+            <img class="item1" src="images/A.jpg" alt="">
+        </div>
+        <div class="continer">
+            <div>
+                <img src="images/B.jpg" alt="" class="item1">
+            </div>
+            <div>
+                <img src="images/C.jpg" alt="" class="item1">
+            </div>
+            <div class="continer2">
+                <img src="images/D.jpg" alt="" class="item1">
+                <img src="images/E.jpg" alt="" class="item1">
+            </div>
+            </div>
+        </div>
+        <div class="continer">
+            <div>
+                <img src="images/F.jpg" alt="" class="item1">
+            </div>
+            <div class="tiger2">
+                    <img src="images/G.jpg" alt="" class="item1">
+                    <img src="images/G.jpg" alt="" class="item1">
+                    <img src="images/G.jpg" alt="" class="item1">
+                    <img src="images/G.jpg" alt="" class="item1">
+            </div>
+            <div>
+                <img src="images/H.jpg" alt="" class="item1">
+            </div>
+    </header>
+    <main></main>
+</body>
+</html>
